@@ -34,9 +34,9 @@ public class ResetButtonForTextFieldConnector extends
     @Override
     protected void extend(ServerConnector serverConnector) {
         serverConnector.addStateChangeHandler(event -> {
-        	Scheduler.get().scheduleDeferred(() -> {
-        		updateResetButtonVisibility();
-        	});
+            Scheduler.get().scheduleDeferred(() -> {
+                updateResetButtonVisibility();
+            });
         });
         textFieldConnector = (AbstractTextFieldConnector) serverConnector;
         textField = (VTextField) textFieldConnector.getWidget();
@@ -86,7 +86,7 @@ public class ResetButtonForTextFieldConnector extends
             updateResetButtonVisibility();
             addResetButtonClickListener(resetButtonElement);
         } else {
-            Element parentElement = resetButtonElement.getParentElement();
+            var parentElement = resetButtonElement.getParentElement();
             if (parentElement != null) {
                 parentElement.removeChild(resetButtonElement);
             }
