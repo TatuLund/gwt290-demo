@@ -11,6 +11,7 @@ Tested this with Amazon Corretto 11.
 
 Based on template for a full-blown Vaadin application that only requires a Servlet 3.0 container to run (no other JEE dependencies).
 
+Longer story in the blog https://vaadin.com/blog/update-your-vaadin-8-project-to-java-11-and-gwt-2.9.0
 
 Project Structure
 =================
